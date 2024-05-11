@@ -7,6 +7,7 @@ node_modules
 # Replace as required with your build location
 /dist
 /lib
+zeroenv
 
 # Deal with environment files
 .env
