@@ -55,6 +55,12 @@ Explanation: `file` - path to the plugin configuration; `parser` - in which form
 
 This file can be stored alongside with the server files in git repo or any other place you decide.
 
+After those steps, you're finally free to use zeroenv. Execute it from the root directory of your Minecraft server by just typing `zeroenv`. This will populate previously defined configs properties with corresponding environment variables. The program will show you a results and errors occured during configuration. Make sure to backup you configs before, however, zeroenv should not mess it up.
+
+If you want to remove those properties from configs (e.g. you want to commit changes to a git repo), consider typing `zeroenv --clean`. This action will replace all properties with their corresponding templates, e.g. `{{DB_HOSTNAME}}:{{DB_PORT}}` instead of `127.0.0.1:3306`. You can store configs in that form for convenience.
+
+By default, zeroenv reads `.env` and `env.targets.json` from a server's root directory, but you can specify custom pathes by using `--env` and `--targets` args correspondingly.
+
 ## Honorable mention
 The name of this project consists from two parts: **zero**, which means zero-configuration, and **env**, which means environment variables.
 
